@@ -4,11 +4,10 @@ import "aos/dist/aos.css";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "#aboutme", label: "About" },
-  { href: "#skills", label: "Skill" },
-  { href: "#projects", label: "Projects" },
-  { href: "#contact", label: "Contact" },
+  { href: "/aboutme", label: "About" },
+  { href: "/skills", label: "Skill" },
+  { href: "/projects", label: "Projects" },
+  { href: "/contact", label: "Contact" },
 ];
 
 const Navbar = () => {
@@ -43,7 +42,7 @@ const Navbar = () => {
 
         <div className="hidden md:block">
           <a
-            href="/resume.pdf"
+            href="/developer_resume.pdf"
             download
             className="border border-white text-white px-4 py-2 rounded-lg hover:bg-white hover:text-black transition"
           >

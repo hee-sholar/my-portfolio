@@ -16,7 +16,7 @@ const AboutMe = () => {
             <div className="aspect-square rounded-full overflow-hidden bg-gray-800 max-w-[500px] mx-auto">
               <img
                 src="https://i.pinimg.com/236x/3a/93/23/3a93230f9140c43031ea0bdd0f23c37e.jpg"
-                alt="Balogun Rahmon"
+                alt="Balogun AbdulRahmon Ishola"
                 className="object-cover w-full h-full"
               />
             </div>
@@ -26,7 +26,7 @@ const AboutMe = () => {
             <h1 className="text-4xl font-bold mb-8">Get to Know Me More</h1>
 
             <p className="text-gray-300 leading-relaxed">
-              Hi, I'm <span className="text-white font-semibold">Balogun Rahmon Ishola</span>, a passionate front-end developer
+              Hi, I'm <span className="text-white font-semibold">Balogun AbdulRahmon Ishola</span>, a passionate front-end developer
               skilled in creating dynamic, responsive, and visually appealing web applications. My expertise lies in
               technologies like <span className="text-white">React, Tailwind CSS, and JavaScript</span>. I thrive on
               solving challenging problems and delivering seamless user experiences.
