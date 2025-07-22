@@ -50,8 +50,8 @@ export default function Contact() {
                 <h3 className="text-lg font-semibold mb-4">Connect With Me</h3>
                 <div className="flex space-x-4">
                   <SocialButton icon={<Github />} href="https://github.com/hee-sholar" />
-                  <SocialButton icon={<Linkedin />} href="#" />
-                  <SocialButton icon={<Twitter />} href="https://twitter.com/dev_clever02" />
+                  <SocialButton icon={<Linkedin />} href="https://www.linkedin.com/in/rahmon-balogun-233b23362/" />
+                  <SocialButton icon={<Twitter />} href="https://x.com/dev_boi16" />
                   <SocialButton icon={<Instagram />} href="https://instagram.com/boi_clever25" />
                 </div>
               </div>
