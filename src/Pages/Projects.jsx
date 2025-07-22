@@ -25,9 +25,9 @@ const projects = [
     title: "WeatherAPI",
     description:
       "Weather forecast app using OpenWeatherMap API with smooth animations.",
-    image: "/images/weatherapi.png",
+    image: "weather.png",
     github: "https://github.com/hee-sholar/weatherapi",
-    liveDemo: "https://weatherapi-rahmon.vercel.app",
+    liveDemo: "https://weather-api-five-opal.vercel.app/",
     technologies: ["React", "OpenWeather API", "Tailwind"],
   },
 ];
