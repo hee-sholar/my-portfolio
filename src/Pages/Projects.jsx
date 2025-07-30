@@ -8,8 +8,8 @@ const projects = [
     description:
       "Farmer-to-consumer platform that simplifies local produce sales and logistics.",
     image: "/agric.png",
-    github: "https://github.com/hee-sholar/agricconnect",
-    liveDemo: "https://agricconnect.vercel.app",
+    github: "https://github.com/hee-sholar/Backend1",
+    liveDemo: "https://backend1-git-main-hee-sholars-projects.vercel.app/",
     technologies: ["React", "Node.js", "MongoDB", "Express", "Tailwind"],
   },
   {
@@ -17,7 +17,7 @@ const projects = [
     description:
       "Live crypto tracking dashboard with search, charts, and global stats.",
     image: "/crypto.png",
-    github: "https://github.com/hee-sholar/cryptoplace",
+    github: "https://github.com/hee-sholar/Crytoplace",
     liveDemo: "https://crytoplace.vercel.app/",
     technologies: ["React", "CoinGecko API", "Tailwind"],
   },
@@ -26,7 +26,7 @@ const projects = [
     description:
       "Weather forecast app using OpenWeatherMap API with smooth animations.",
     image: "weather.png",
-    github: "https://github.com/hee-sholar/weatherapi",
+    github: "https://github.com/hee-sholar/Weather-API",
     liveDemo: "https://weather-api-five-opal.vercel.app/",
     technologies: ["React", "OpenWeather API", "Tailwind"],
   },
