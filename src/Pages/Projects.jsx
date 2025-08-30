@@ -9,7 +9,7 @@ const projects = [
       "Farmer-to-consumer platform that simplifies local produce sales and logistics.",
     image: "/agric.png",
     github: "https://github.com/hee-sholar/Backend1",
-    liveDemo: "https://backend1-git-main-hee-sholars-projects.vercel.app/",
+    liveDemo: "https://agric-connct.vercel.app/",
     technologies: ["React", "Node.js", "MongoDB", "Express", "Tailwind"],
   },
   {
