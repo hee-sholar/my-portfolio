@@ -99,8 +99,8 @@ const HomePage = () => {
                 { href: "#contact", icon: <ContactIcon />, text: "Contact" },
                 { href: "https://github.com/hee-sholar", icon: <Github />, text: "GitHub" },
                 { href: "https://www.linkedin.com/in/rahmon-balogun-233b23362/", icon: <Linkedin />, text: "LinkedIn" },
-                { href: "https://x.com/dev_boi16", icon: <Twitter />, text: "Twitter" },
-                { href: "https://instagram.com/boi_clever25", icon: <Instagram />, text: "Instagram" },
+                { href: "https://x.com/RayDevX16", icon: <Twitter />, text: "Twitter" },
+                { href: "https://www.instagram.com/jargo1910/", icon: <Instagram />, text: "Instagram" },
               ].map((item, i) => (
                 <a
                   key={i}
