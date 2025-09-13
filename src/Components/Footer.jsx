@@ -9,7 +9,7 @@ const Footer = () => {
           <a href="https://www.facebook.com/yourprofile" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition">
             <Facebook size={24} />
           </a>
-          <a href="https://x.com/dev_boi16" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition">
+          <a href="https://x.com/RayDevX16" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition">
             <Twitter size={24} />
           </a>
           <a href="https://www.linkedin.com/in/rahmon-balogun-233b23362/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition">
@@ -24,7 +24,7 @@ const Footer = () => {
         </div>
 
         {/* Footer Text */}
-        <p className="text-gray-400">© {new Date().getFullYear()} Clever. All Rights Reserved.</p>
+        <p className="text-gray-400">© {new Date().getFullYear()} RayDev. All Rights Reserved.</p>
       </div>
     </footer>
   );

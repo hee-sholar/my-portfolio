@@ -51,7 +51,7 @@ export default function Contact() {
                 <div className="flex space-x-4">
                   <SocialButton icon={<Github />} href="https://github.com/hee-sholar" />
                   <SocialButton icon={<Linkedin />} href="https://www.linkedin.com/in/rahmon-balogun-233b23362/" />
-                  <SocialButton icon={<Twitter />} href="https://x.com/dev_boi16" />
+                  <SocialButton icon={<Twitter />} href="https://x.com/RayDevX16" />
                   <SocialButton icon={<Instagram />} href="https://instagram.com/boi_clever25" />
                 </div>
               </div>

@@ -24,7 +24,7 @@ const Navbar = () => {
     >
       <nav className="container mx-auto px-4 h-20 flex items-center justify-between">
         <a href="/" className="text-white text-xl font-bold">
-          Clever
+          <i>RayDev</i>
         </a>
 
         <ul className="hidden md:flex items-center gap-8">
