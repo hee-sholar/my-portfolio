@@ -1,94 +1,124 @@
-import { useEffect, useState } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { Menu, X } from "lucide-react";
+import { useState, useEffect } from "react"
+import { Menu, X, Sun, Moon } from "lucide-react"
+import AOS from "aos"
+import "aos/dist/aos.css"
 
-const navLinks = [
-  { href: "/aboutme", label: "About" },
-  { href: "/skills", label: "Skill" },
-  { href: "/projects", label: "Projects" },
-  { href: "/contact", label: "Contact" },
-];
-
-const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false)
+  const [darkMode, setDarkMode] = useState(() => {
+    return localStorage.getItem("theme") === "dark"
+  })
 
   useEffect(() => {
-    AOS.init({ duration: 1000, delay: 200, once: true });
-  }, []);
+    AOS.init({ once: true })
+  }, [])
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark")
+      localStorage.setItem("theme", "dark")
+    } else {
+      document.documentElement.classList.remove("dark")
+      localStorage.setItem("theme", "light")
+    }
+  }, [darkMode])
 
   return (
-    <header
-      className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-sm"
+    <nav
+      className="fixed top-0 w-full bg-white/90 dark:bg-[#0f0f0f]/90 backdrop-blur-lg border-b border-gray-200 dark:border-gray-800 z-50 transition-colors"
       data-aos="fade-down"
+      data-aos-duration="800"
     >
-      <nav className="container mx-auto px-4 h-20 flex items-center justify-between">
-        <a href="/" className="text-white text-xl font-bold">
-          <i>RayDev</i>
-        </a>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
 
-        <ul className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                className="text-sm text-white hover:text-green-400 transition-colors"
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
+          {/* Logo */}
+          <div className="flex items-center gap-2">
+            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-sm">R</span>
+            </div>
+            <span className="font-semibold text-gray-900 dark:text-white">RayDev</span>
+          </div>
 
-        <div className="hidden md:block">
-          <a
-            href="/developer_resume.pdf"
-            download
-            className="border border-white text-white px-4 py-2 rounded-lg hover:bg-white hover:text-black transition"
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center gap-8">
+            <a href="#home" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 transition">
+              Home
+            </a>
+            <a href="#services" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 transition">
+              Services
+            </a>
+            <a href="#projects" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 transition">
+              Projects
+            </a>
+            <a href="#contact" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 transition">
+              Contact Us
+            </a>
+
+            {/* Dark / Light Toggle */}
+            <button
+              onClick={() => setDarkMode(!darkMode)}
+              className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition"
+            >
+              {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
+
+            {/* WhatsApp Button */}
+            <a
+              href="https://wa.me/2349159329752?text=Hello%20RayDev%2C%20I%20would%20like%20to%20book%20a%20call."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-600 text-white px-6 py-2 rounded-full font-medium hover:bg-blue-700 transition"
+            >
+              Book a Call
+            </a>
+          </div>
+
+          {/* Mobile Menu Toggle */}
+          <button
+            className="md:hidden text-gray-800 dark:text-gray-200"
+            onClick={() => setIsOpen(!isOpen)}
           >
-            Resume
-          </a>
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
         </div>
 
-        <button
-          className="md:hidden text-white"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          {isMenuOpen ? <X /> : <Menu />}
-        </button>
-      </nav>
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="md:hidden pb-4 space-y-4" data-aos="fade-down" data-aos-duration="600">
+            <a href="#home" className="block text-gray-800 dark:text-gray-200 hover:text-blue-500">
+              Home
+            </a>
+            <a href="#services" className="block text-gray-800 dark:text-gray-200 hover:text-blue-500">
+              Services
+            </a>
+            <a href="#projects" className="block text-gray-800 dark:text-gray-200 hover:text-blue-500">
+              Projects
+            </a>
+            <a href="#contact" className="block text-gray-800 dark:text-gray-200 hover:text-blue-500">
+              Contact Us
+            </a>
 
-      {isMenuOpen && (
-        <div
-          className="md:hidden bg-black/95 backdrop-blur-sm"
-          data-aos="fade-left"
-        >
-          <ul className="container mx-auto px-4 py-4 flex flex-col gap-4">
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <a
-                  href={link.href}
-                  className="block text-sm text-white hover:text-green-400 transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
-            <li>
-              <a
-                href="/resume.pdf"
-                download
-                className="block text-center border border-white text-white px-4 py-2 rounded-lg hover:bg-white hover:text-black transition"
-              >
-                Resume
-              </a>
-            </li>
-          </ul>
-        </div>
-      )}
-    </header>
-  );
-};
+            {/* Mobile Dark Mode Toggle */}
+            <button
+              onClick={() => setDarkMode(!darkMode)}
+              className="w-full bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-gray-200 px-6 py-2 rounded-full font-medium"
+            >
+              {darkMode ? "Light Mode" : "Dark Mode"}
+            </button>
 
-export default Navbar;
+            {/* Mobile WhatsApp Button */}
+            <a
+              href="https://wa.me/2349159329752?text=Hello%20RayDev%2C%20I%20would%20like%20to%20book%20a%20call."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full bg-blue-600 text-white px-6 py-2 rounded-full font-medium hover:bg-blue-700 transition"
+            >
+              Book a Call
+            </a>
+          </div>
+        )}
+      </div>
+    </nav>
+  )
+}

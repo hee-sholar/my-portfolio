@@ -1,3 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Outfit:wght@100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*{
+    font-family: Outfit;
+}
+.active hr{
+    @apply block
+}
+
+@keyframes floatIcon {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+
+.icon-float {
+  animation: floatIcon 3s ease-in-out infinite;
+}
+
+::-webkit-scrollbar{
+    @apply hidden
+}
+
+html {
+  scroll-behavior: smooth;
+}
