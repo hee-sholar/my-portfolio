@@ -80,12 +80,12 @@ export default function Hero() {
 
             {/* CTA Buttons */}
             <div className="flex gap-4 flex-wrap">
-              <Link
-                to="/projects"
+              <a 
+                href="#projects"
                 className="bg-accent text-primary-foreground px-8 py-3 rounded-full font-medium hover:bg-accent/90 transition flex items-center gap-2"
               >
                 View Projects <ArrowRight className="w-5 h-5" />
-              </Link>
+              </a>
 
               <a
                 href="https://wa.me/2349159329752?text=Hello%20AbdulRahmon%2C%20I%20would%20like%20to%20book%20a%20call."
