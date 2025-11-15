@@ -20,7 +20,7 @@ const projects = [
     description: "A digital marketplace connecting farmers with buyers. It supports product listing, order management, secure payments, and chat support.",
     stack: ["React", "Node.js", "MongoDB", "Cloudinary", "JWT Auth"],
     demo: "https://your-agricconnect-live-link.com",
-    code: "https://github.com/agricconnect"
+    code: "https://github.com/hee-sholar/Backend1"
   },
   {
     title: "Crypto Price Tracker Dashboard",
