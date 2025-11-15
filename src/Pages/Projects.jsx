@@ -10,8 +10,8 @@ const projects = [
     image: "/book.png",
     description: "A modern medical appointment platform that allows users to book consultations online with secure authentication and real-time scheduling.",
     stack: ["React", "Tailwind CSS", "Node.js", "Express", "MongoDB"],
-    demo: "https://your-book-appointment-live-link.com",
-    code: "https://github.com/your-appointment-system"
+    demo: "https://prescripto-8e1p.vercel.app",
+    code: "https://github.com/hee-sholar/prescripto"
   },
   {
     title: "AgricConnect Platform",
@@ -19,7 +19,7 @@ const projects = [
     image: "/agric.png",
     description: "A digital marketplace connecting farmers with buyers. It supports product listing, order management, secure payments, and chat support.",
     stack: ["React", "Node.js", "MongoDB", "Cloudinary", "JWT Auth"],
-    demo: "https://your-agricconnect-live-link.com",
+    demo: "https://agric-connct.vercel.app",
     code: "https://github.com/hee-sholar/Backend1"
   },
   {
